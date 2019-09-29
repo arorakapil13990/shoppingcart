@@ -1,23 +1,22 @@
 package com.equalexperts.entity;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class User {
 
     private int id;
     private String name;
-    private List<Product> products;
-
+    private Cart cart;
+    
+    
     public User() {
     }
 
-    public User(int id, String name, List<Product> products) {
+    public User(int id, String name, Cart cart) {
         super();
         this.id = id;
         this.name = name;
-        this.products = products;
+        this.cart = cart;
     }
 
     public int getId() {
@@ -36,15 +35,16 @@ public class User {
         this.name = name;
     }
 
-    public List<Product> getProducts() {
-        return products;
-    }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
-    }
+    public Cart getCart() {
+		return cart;
+	}
 
-    @Override
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

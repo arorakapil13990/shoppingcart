@@ -1,13 +1,13 @@
 package com.equalexperts.entity;
 
-public class Product {
+public class Item {
 
     private int id;
     private String name;
     private int quantity;
     private double price;
 
-    public Product(int id, String name, int quantity, double price) {
+    public Item(int id, String name, int quantity, double price) {
         super();
         this.id = id;
         this.name = name;
