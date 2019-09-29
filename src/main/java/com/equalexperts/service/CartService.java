@@ -1,16 +1,14 @@
 package com.equalexperts.service;
 
+import static java.lang.Double.parseDouble;
+
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import com.equalexperts.entity.Cart;
 import com.equalexperts.entity.Item;
 import com.equalexperts.entity.User;
-
-import static java.lang.Double.*;
 
 public class CartService {
 

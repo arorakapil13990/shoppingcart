@@ -10,6 +10,7 @@ import org.junit.Test;
 
 import com.equalexperts.entity.Cart;
 import com.equalexperts.entity.Item;
+import com.equalexperts.entity.Product;
 import com.equalexperts.entity.User;
 
 public class CartTest {
@@ -19,7 +20,8 @@ public class CartTest {
 
 	@Before
 	public void setUp() {
-		Item item = new Item(1, "Dove Soaps", 5, 39.99);
+		Product product= new Product(1, "Dove Soaps",39.99);
+		Item item = new Item(1, product,5);
 		List<Item> items = new ArrayList<>();
 		items.add(item);
 
