@@ -27,4 +27,8 @@ public class Cart {
 		return Double.valueOf(decimalFormat.format(totalPrice));
 	}
 
+	
+	public int totalNumberOfItems(User user){
+		return userItemsMap.get(user).stream().mapToInt(x -> x.getQuantity()).sum();
+	}
 }

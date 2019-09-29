@@ -27,6 +27,10 @@ public class CartTest {
 	public void testTotalPriceForUser() {
 		assertEquals(199.95, cart.getTotalPriceForUser(user),0);
 	}
-
+	
+	@Test
+	public void testTotalQuantityOfItemsForUser(){
+		assertEquals(5, cart.totalNumberOfItems(user));
+	}
 }
 
