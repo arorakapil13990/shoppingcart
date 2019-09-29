@@ -7,7 +7,7 @@ public enum Items {
     private double price;
     private String itemName;
 
-    private Items(double price,String itemName) {
+    Items(double price, String itemName) {
       this.price = price;
       this.itemName=itemName;
     }

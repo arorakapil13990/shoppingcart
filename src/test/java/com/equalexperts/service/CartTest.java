@@ -1,8 +1,10 @@
 package com.equalexperts.service;
 
+import static java.util.Arrays.asList;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,25 +14,25 @@ import com.equalexperts.entity.User;
 import com.equalexperts.enums.Items;
 
 public class CartTest {
-	
-	private User user = null;
-	Cart cart = new Cart();
-	
-	@Before
-	public void setUp(){
-		Product product = new Product(1, Items.DOVE_SOAPS.getItemName(), 5, Items.DOVE_SOAPS.getPrice());
-		user = new User(1,"kapil",Arrays.asList(product));
-		cart.addItem(user, product);
-	}
 
-	@Test
-	public void testTotalPriceForUser() {
-		assertEquals(199.95, cart.getTotalPriceForUser(user),0);
-	}
-	
-	@Test
-	public void testTotalQuantityOfItemsForUser(){
-		assertEquals(5, cart.totalNumberOfItems(user));
-	}
+    private User user = null;
+    Cart cart = new Cart();
+
+    @Before
+    public void setUp() {
+        Product product = new Product(1, Items.DOVE_SOAPS.getItemName(), 5, Items.DOVE_SOAPS.getPrice());
+        user = new User(1, "kapil", asList(product));
+        cart.addItem(user, product);
+    }
+
+    @Test
+    public void testTotalPriceForUser() {
+        assertEquals(199.95, cart.getTotalPriceForUser(user), 0);
+    }
+
+    @Test
+    public void testTotalQuantityOfItemsForUser() {
+        assertEquals(5, cart.totalNumberOfItems(user));
+    }
 }
 
