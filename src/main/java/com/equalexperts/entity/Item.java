@@ -3,16 +3,13 @@ package com.equalexperts.entity;
 public class Item {
 
     private int id;
-    private String name;
+    private Product product;
     private int quantity;
-    private double price;
 
-    public Item(int id, String name, int quantity, double price) {
-        super();
+    public Item(int id, Product product, int quantity) {
         this.id = id;
-        this.name = name;
+        this.product = product;
         this.quantity = quantity;
-        this.price = price;
     }
 
     public int getId() {
@@ -23,14 +20,6 @@ public class Item {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getQuantity() {
         return quantity;
     }
@@ -39,12 +28,12 @@ public class Item {
         this.quantity = quantity;
     }
 
-    public double getPrice() {
-        return price;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 }
 
