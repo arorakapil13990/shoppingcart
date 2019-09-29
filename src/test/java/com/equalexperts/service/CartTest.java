@@ -27,7 +27,6 @@ public class CartTest {
 
 		Cart cart = new Cart(1, items);
 		user = new User(1, "kapil", cart);
-		cartService.addItem(user, cart);
 	}
 	
 
